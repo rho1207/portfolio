@@ -42,7 +42,7 @@ function Navbar(props) {
       <ListItemButton onClick={() => props.setSelected("Projects")}>
         <ListItemText>Projects</ListItemText>
       </ListItemButton>
-      <ListItemButton onClick={() => props.setSelected("Resume")}>
+      <ListItemButton component="a" href="https://drive.google.com/file/d/1aKNh4XUhaNhc7WE1xQzczkrqU399YAOW/view?usp=sharing">
         <ListItemText>Resume</ListItemText>
       </ListItemButton>
     </List>
