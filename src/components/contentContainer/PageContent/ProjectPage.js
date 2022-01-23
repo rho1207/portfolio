@@ -1,6 +1,7 @@
 import { React, useState } from 'react';
-import { List, ListItemButton, ListItemText, SnackbarContent } from '@mui/material'
+import { List, ListItemButton, ListItemText } from '@mui/material'
 import ProjectCard from './ProjectCard';
+import * as sc from './ProjectPage.styles'
 
 function ProjectPage() {
 
@@ -27,29 +28,36 @@ function ProjectPage() {
             case "snake":
                 return <ProjectCard back={backButton}></ProjectCard>;
             default:
-                return <List>
-                    <ListItemButton onClick={() => { setProject("portfolio") }}>
-                        <ListItemText>Portfolio Website</ListItemText>
-                    </ListItemButton>
-                    <ListItemButton onClick={() => { setProject("aeresgen") }}>
-                        <ListItemText>Associated Engineering Resume Generator</ListItemText>
-                    </ListItemButton>
-                    <ListItemButton onClick={() => { setProject("trippo") }}>
-                        <ListItemText>Trippo</ListItemText>
-                    </ListItemButton>
-                    <ListItemButton onClick={() => { setProject("courses") }}>
-                        <ListItemText>UBC Course Data Visualization</ListItemText>
-                    </ListItemButton>
-                    <ListItemButton onClick={() => { setProject("vet") }}>
-                        <ListItemText>Veterinarian Database Project</ListItemText>
-                    </ListItemButton>
-                    <ListItemButton onClick={() => { setProject("tft") }}>
-                        <ListItemText>TFT Queries</ListItemText>
-                    </ListItemButton>
-                    <ListItemButton onClick={() => { setProject("snake") }}>
-                        <ListItemText>Snake Game</ListItemText>
-                    </ListItemButton>
-                </List>;
+                return <sc.list dense>
+                    <sc.listButton alignItems="flex-start" onClick={() => { setProject("portfolio") }}>
+                        <sc.buttonYear>2022</sc.buttonYear>
+                        <sc.buttonTitle primary="Portfolio Website" secondary="You're already here!"></sc.buttonTitle>
+                    </sc.listButton>
+                    <sc.listButton alignItems="flex-start" onClick={() => { setProject("aeresgen") }}>
+                        <sc.buttonYear>2021</sc.buttonYear>
+                        <sc.buttonTitle primary="Associated Engineering Resume Generator" secondary="AE Web app to help project admins create proposals to bid on projects"></sc.buttonTitle>
+                    </sc.listButton>
+                    <sc.listButton alignItems="flex-start" onClick={() => { setProject("trippo") }}>
+                        <sc.buttonYear>2021</sc.buttonYear>
+                        <sc.buttonTitle primary="Trippo" secondary="Web application to help users create and manage travel itineraries"></sc.buttonTitle>
+                    </sc.listButton>
+                    <sc.listButton alignItems="flex-start" onClick={() => { setProject("courses") }}>
+                        <sc.buttonYear>2021</sc.buttonYear>
+                        <sc.buttonTitle primary="UBC Course Data Visualization" secondary="Allows users to query UBC campus data"></sc.buttonTitle>
+                    </sc.listButton>
+                    <sc.listButton alignItems="flex-start" onClick={() => { setProject("vet") }}>
+                        <sc.buttonYear>2020</sc.buttonYear>
+                        <sc.buttonTitle primary="Veterinarian Database Project" secondary="Full stack application providing essential information on zoo animals and their caretakers"></sc.buttonTitle>
+                    </sc.listButton>
+                    <sc.listButton alignItems="flex-start" onClick={() => { setProject("tft") }}>
+                        <sc.buttonYear>2019</sc.buttonYear>
+                        <sc.buttonTitle primary="TFT Queries" secondary=""></sc.buttonTitle>
+                    </sc.listButton>
+                    <sc.listButton alignItems="flex-start" onClick={() => { setProject("snake") }}>
+                        <sc.buttonYear>2019</sc.buttonYear>
+                        <sc.buttonTitle primary="Snake Game" secondary="The classic snake game implemented in Haskell"></sc.buttonTitle>
+                    </sc.listButton>
+                </sc.list>;
         }
     }
 

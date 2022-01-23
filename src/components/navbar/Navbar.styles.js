@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
-    width: 25vw;
+    text-align: center;
+    width: 35vw;
     background-color: #f5f5f5;
 `;
