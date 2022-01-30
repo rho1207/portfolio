@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import ProjectCard from './ProjectCard';
+import { Build } from '@material-ui/icons';
 import * as sc from './ProjectPage.styles'
 
 function ProjectPage() {
@@ -14,7 +15,7 @@ function ProjectPage() {
         switch (projectSelected) {
             case "portfolio":
                 return <ProjectCard back={backButton} title="Portfolio Website" link="" github="https://github.com/rho1207/portfolio"
-                    desc="Designed and developed my personal website to showcase projects."
+                    desc="Designed and developed my personal website to showcase projects. Currently a work in progress."
                     tech="React.JS, HTML/CSS">
                 </ProjectCard>;
             case "aeresgen":
@@ -51,15 +52,15 @@ function ProjectPage() {
                     tech="Java, JDBC">
                 </ProjectCard>;
             case "tft":
-                return <ProjectCard back={backButton} title="Teamfight Tactics Queries" link="" github=""
-                    desc="Created a natural language processor that answers queries to the game Teamfight Tactics"
+                return <ProjectCard back={backButton} title="Teamfight Tactics Queries" link="" github="https://github.com/rho1207/tft-queries"
+                    desc="Created a natural language processor that answers queries to the game Teamfight Tactics."
                     tech="Prolog">
                 </ProjectCard>;
             case "snake":
                 return <ProjectCard back={backButton} title="Snake Game" link="" github="https://github.com/rho1207/Snake-Haskell"
                     desc="Created the classic snake game using Haskell displayed on a GUI using Gloss with single-player and 
                     multiplayer options and different difficulties and developed a bot that picks the best directions to move 
-                    to eat food and increase score based on its current location, which can also be played against in multiplayer mode"
+                    to eat food and increase score based on its current location, which can also be played against in multiplayer mode."
                     tech="Haskell, Gloss">
                 </ProjectCard>;
             default:
@@ -97,7 +98,8 @@ function ProjectPage() {
     }
 
     return <div>
-        <span>Projects</span>
+        {projectSelected === "default" ? <div style={{ textAlign: 'center' }}>
+            <h1 style={{ color: '#3266a8', margin: "0 0", padding: '0 0' }}>{<Build></Build>}Projects</h1></div> : null}
         {paneSelector()}
     </div>;
 }

@@ -16,7 +16,8 @@ function Navbar(props) {
 
 
   return <sc.NavbarContainer>
-    <h1>Richard Ho</h1>
+    <h1 style={{ fontSize: "30px", fontFamily: "DM Mono, monospace" }}>Richard Ho</h1>
+    <img src="profilepic.png" alt="profile" style={{ height: "250px", margin: "none" }} />
     {count ? (
       <Typist avgTypingDelay={80} onTypingDone={() => setCount(0)}>
         <span>Full Stack Developer.</span>
@@ -26,27 +27,27 @@ function Navbar(props) {
         <span>Back End Developer.</span>
         <Typist.Backspace count={19} delay={400} />
       </Typist>) : ("")}
-    <div>
-      <Phone></Phone>
-      <span>778-938-2588 </span>
+    <sc.infoDiv>
+      <Phone ></Phone>
+      <span >778-938-2588 </span>
       <Email></Email>
-      <span>rho1207@hotmail.com</span>
+      <span >rho1207@hotmail.com</span>
       <br></br>
-      <GitHub></GitHub>
+      <GitHub style={{ marginTop: "0.7em" }}></GitHub>
       <a href="https://github.com/rho1207">rho1207</a>
-    </div>
+    </sc.infoDiv >
     <List>
       <ListItemButton onClick={() => props.setSelected("About")}>
-        <ListItemText>About</ListItemText>
+        <sc.buttonText>About</sc.buttonText>
       </ListItemButton>
       <ListItemButton onClick={() => props.setSelected("Projects")}>
-        <ListItemText>Projects</ListItemText>
+        <sc.buttonText >Projects</sc.buttonText>
       </ListItemButton>
       <ListItemButton component="a" href="https://drive.google.com/file/d/1aKNh4XUhaNhc7WE1xQzczkrqU399YAOW/view?usp=sharing">
-        <ListItemText>Resume</ListItemText>
+        <sc.buttonText>Resume</sc.buttonText>
       </ListItemButton>
     </List>
-  </sc.NavbarContainer>;
+  </sc.NavbarContainer >;
 }
 
 export default Navbar;

@@ -3,4 +3,6 @@
   flex-direction: row;
   height: fit-content;
   min-height: 100vh;
+  background-color:white;
+  font-family: DM Mono, monospace;
 }

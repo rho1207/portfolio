@@ -5,7 +5,7 @@ import ContentContainer from './components/contentContainer/ContentContainer';
 import React from 'react';
 function App() {
 
-  const [selected, setSelected] = useState("Projects");
+  const [selected, setSelected] = useState("About");
 
   return (
     <div className="App">

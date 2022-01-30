@@ -5,28 +5,26 @@ import { ArrowBack } from "@material-ui/icons";
 function ProjectCard(props) {
 
     const createDemoLink = () => {
-        if (props.link !== "") return <a href={props.link}>Demo</a>;
-        else return;
+        if (props.link !== "") return <a href={props.link}>External</a>;
+        else return null;
     }
 
     const createGithubLink = () => {
-        if (props.link !== "") return <a href={props.github}>Github</a>;
-        else return;
+        if (props.github !== "") return <a href={props.github}>Github</a>;
+        else return null;
     }
 
     return <div>
-        <IconButton onClick={() => { props.back() }}>
+        <h1 style={{ margin: '0 0', textAlign: 'center', color: '#3266a8' }}>{<IconButton style={{}} onClick={() => { props.back() }}>
             <ArrowBack></ArrowBack>
-        </IconButton>
-        <h1>{props.title}</h1>
-        <br></br>
-        {createDemoLink()}
+        </IconButton>}{props.title}</h1>
         <br></br>
         {createGithubLink()}
-        <br></br>
+        {createGithubLink() ? <br></br> : null}
+        {createDemoLink()}
+        {createDemoLink() ? <br></br> : null}
         <p>{props.desc}</p>
-        <br></br>
-        <p>Technologies: {props.tech}</p>
+        <p style={{ color: '#3266a8' }}>Technologies: {props.tech}</p>
     </div>;
 }
 
