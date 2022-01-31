@@ -30,6 +30,7 @@ function Navbar(props) {
     <sc.infoDiv>
       <Phone ></Phone>
       <span >778-938-2588 </span>
+      <br></br>
       <Email></Email>
       <span >rho1207@hotmail.com</span>
       <br></br>
@@ -43,7 +44,7 @@ function Navbar(props) {
       <ListItemButton onClick={() => props.setSelected("Projects")}>
         <sc.buttonText >Projects</sc.buttonText>
       </ListItemButton>
-      <ListItemButton component="a" href="https://drive.google.com/file/d/1aKNh4XUhaNhc7WE1xQzczkrqU399YAOW/view?usp=sharing">
+      <ListItemButton component="a" href="https://drive.google.com/file/d/1UYeXWHQiWkjq0B9wVaguSryU1CWbUKpz/view?usp=sharing">
         <sc.buttonText>Resume</sc.buttonText>
       </ListItemButton>
     </List>

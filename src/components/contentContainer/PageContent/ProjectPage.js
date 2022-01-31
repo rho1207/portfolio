@@ -43,7 +43,7 @@ function ProjectPage() {
                     tech="Typescript, HTML/CSS, Mocha, Node.JS ">
                 </ProjectCard>;
             case "vet":
-                return <ProjectCard back={backButton} title="Veterinarian Database Project" link="" github="https://github.com/hobbeskocha/304-M4/tree/master/CPSC304-M4"
+                return <ProjectCard back={backButton} title="Veterinarian Database Project" link="" github=""
                     desc="Developed a scalable full stack application modeling zoo staff and animals in a team of three. I
                     created efficient SQL queries to populate the UI with essential information for staff such as health records for animals 
                     (general traits, vaccinations, examinations, dietary restrictions) and pages containing information about which staff members are assigned to work with each animal.
@@ -75,7 +75,7 @@ function ProjectPage() {
                     </sc.listButton>
                     <sc.listButton alignItems="flex-start" onClick={() => { setProject("trippo") }}>
                         <sc.buttonYear>2021</sc.buttonYear>
-                        <sc.buttonTitle primary="Trippo" secondary="Web application to help users create and manage travel itineraries and receive personalized suggestions"></sc.buttonTitle>
+                        <sc.buttonTitle primary="Trippo" secondary="Web app for users to create and manage travel itineraries and receive personalized suggestions"></sc.buttonTitle>
                     </sc.listButton>
                     <sc.listButton alignItems="flex-start" onClick={() => { setProject("courses") }}>
                         <sc.buttonYear>2021</sc.buttonYear>
